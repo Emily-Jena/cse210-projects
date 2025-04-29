@@ -14,5 +14,6 @@ class Program
         }
 
         Console.WriteLine("Hey, how are you?");
+        Console.WriteLine("Hey Betty, How are you?");
     }
 }
