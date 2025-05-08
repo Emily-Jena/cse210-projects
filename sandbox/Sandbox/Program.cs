@@ -1,31 +1,6 @@
 using System;
 
-class Circle 
-{
-    private double _radius; // only accessible within this class - always protected
 
-    public void SetRadius(double radius) // can access outside of class
-    {
-        if (radius < 0) 
-        {
-            Console.WriteLine("Error, radius must be > 0");
-            return;
-        }
-        _radius = radius; //attribute radius is = to radius
-        //this.radius = radius // it is an option.
-    }
-
-    public double GetRadius()
-    {
-        return _radius;
-    }
-
-    public double GetArea()
-    {
-        return Math.PI * _radius * _radius;
-    }
-
-}
 
 class Program
 {
@@ -34,8 +9,8 @@ class Program
 //     }
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Sandbox World!");
-        Console.WriteLine("This is in C#");
+        // Console.WriteLine("Hello Sandbox World!");
+        // Console.WriteLine("This is in C#");
 
         Circle myCircle = new Circle();
         myCircle.SetRadius(10);
@@ -43,11 +18,17 @@ class Program
 
         Circle myCircle2 = new Circle();
         myCircle2.SetRadius(20);
-        Console.WriteLine($"{myCircle.GetRadius()}");
+        Console.WriteLine($"{myCircle2.GetRadius()}");
 
         
         Console.WriteLine($"{myCircle.GetArea()}");
         Console.WriteLine($"{myCircle2.GetArea()}");
+
+        Cylinder myCylinder = new Cylinder();
+        myCylinder.SetHeight(10);
+        myCylinder.SetCircle(myCircle);
+        Console.WriteLine($"{myCylinder.GetVolume()}");
+
         
         }
         
