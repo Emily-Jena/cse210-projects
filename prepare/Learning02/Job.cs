@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
+// Create Class with variables
 public class Job
 {
     public string _company;
@@ -7,8 +8,9 @@ public class Job
     public int _startYear;
     public int _endYear;
 
-    public void display()
+    //Add Display method to Job class
+    public void Display()
     {
-        Console.WriteLine($"{_company} ({_jobTitle}) {_startYear}-{_endYear}");  
+        Console.WriteLine($"{_jobTitle} ({_company}) {_startYear}-{_endYear}");
     }
 }
